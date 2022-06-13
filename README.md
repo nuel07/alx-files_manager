@@ -17,4 +17,4 @@ The objective is to build a simple platform to upload and view files with the fo
 
 This project is an effort of:
 - [Promise Emmanuel Yehangane](https://github.com/nuel07)
-- [Tom Kigarde](https:github.com/MISTOM)
+- [Tom Kigarde](https://github.com/MISTOM)
