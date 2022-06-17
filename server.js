@@ -1,11 +1,11 @@
 import express from 'express';
 import controllerRouting from './routes/index';
 
-const PORT = process.env.PORT || 5000;
+const exPort = process.env.PORT || 5000;
 const app = express();
 app.use(express.json());
 
 controllerRouting(app);
 app.listen(exPort, () => {
-    console.log(`Server running on port ${exPort}`); 
+  console.log(`Server running on port ${exPort}`);
 });
