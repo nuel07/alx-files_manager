@@ -4,7 +4,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { mkdir, writeFile, readFileSync } from 'fs';
 import mime from 'mime-types';
 import dbClient from '../utils/db';
-import { getIdAndKey, isValidUser } from '../utils/users';
 
 class FilesController {
     static async postUpload(req, res) {

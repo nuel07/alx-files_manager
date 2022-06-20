@@ -2,7 +2,6 @@ import sha1 from 'sha1';
 import Queue from 'bull';
 import { ObjectId } from 'mongodb';
 import dbClient from '../utils/db';
-import getIdAndKey from '../utils/users';
 
 const userQ = new Queue('userQ');
 
@@ -30,7 +29,8 @@ class UsersController {
     }
    
     static async getMe(req, res) {
-	const { userId } = await getIdAndKey(req);
+	const user_token = request.header('X-Token');
+	const user_key = `auth_${user_token}`;
 	const user = await dbClient.users.findOne({ _id: ObjectId(userId) });	
 	if (!user) return res.status(401).send({ error: 'Unauthorized' });
 
